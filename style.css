@@ -26,7 +26,6 @@ body {
 .navbar-custom {
     background-color: var(--primary); 
     padding: 10px 5px;
-    
 }
 .navbar-brand {
     font-weight: bold;
@@ -60,13 +59,13 @@ body {
 /* Hamburger */
 
 @media (min-width: 472px) {
-    .hamburger,.contentDisplay{
+    .hamburger,.contentDisplay,hr{
         display: none;
     }
  }
 
 @media (max-width: 472px) {
-    .smallscreen{
+    .DesktopView{
         display: none;
     }
     .search-container{
@@ -78,18 +77,43 @@ body {
         border: none;
     }
     #target {
-        display: block; 
-        text-align: center;
+        width: 65vw;
+        height: auto;
+        background-color: var(--white);
+        margin-top: 0;
+        border-radius: 0 0 5px 5px;
+        border-top: 5px solid var(--shade3);
+        box-shadow: 0px 5px 8px black;
+        position: absolute;
         visibility: hidden; /* Initially hidden */
         max-height: 0; 
         overflow: hidden;
+        z-index: 10;
     }
-    
-    #target.show {
-        visibility: visible; /* Makes it visible when expanded */
-        max-height: 500px; /* Adjust this height if needed */
+   
+    #target.show{
+        transition: border-top 0ms ease-in-out, all 1s ease-in-out;
+        visibility: visible;  /*Makes it visible when expanded */
+        max-height: 500px;  /*Adjust this height if needed */
     }
-    
+
+    .item {
+        font-weight: 500;
+        color: var(--primary) !important;
+        text-shadow: 0 0 1px var(--shade4);
+        text-decoration: none;
+    }
+
+    .itembox:hover{
+        transition: all 0.1s ease-in-out;
+        background-color: rgba(220, 220, 220, 0.479);
+        border-left: 5px solid var(--primary);
+    }
+
+    hr{
+        margin: 0;
+        color: black;
+    }
  }
 
 /* ------------------------------------------------------------------------- */
