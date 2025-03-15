@@ -30,30 +30,32 @@
             <i class="bi bi-list text-white fs-1"></i>
             </button> 
 
-            <!-- Collapsible Menu -->
-            <div class=" collapse mt-2 " id="target">
-                <a href="#" class="nav-link contentDisplay p-4 mx-3 hover">MENU</a>
-
-                <a class="nav-link d-flex justify-content-center align-items-center" href="#">
-                <i class="bi bi-person fs-4 contentDisplay mx-3 hover"></i>
-                </a>
-
-                <a class="nav-link p-4 contentDisplay mx-3 hover" href="#">CART</a>
-            </div>
 
             <!-- For Desktop and Laptop view -->
-            <div class="smallscreen ">
-                <a href="#" class="nav-link smallscreen hover">MENU</a>
+            <div class="DesktopView ">
+                <a href="#" class="nav-link DesktopView hover">MENU</a>
             </div> 
-            <div class="gap-4 mx-4 smallscreen">
+            <div class="gap-4 mx-4 DesktopView">
                 <a class="nav-link d-flex align-items-center" href="#">
                     <i class="bi bi-person fs-4 hover"></i>
                 </a>
             </div>
-            <div class="smallscreen"><a class="nav-link hover" href="#">CART</a></div>
+            <div class="DesktopView"><a class="nav-link hover" href="#">CART</a></div>
             </div>
         </div>
-    </nav>   
+    </nav>    
+
+
+<!-- Collapsible Menu -->
+    <div class="navbox  d-flex align-content-center justify-content-center" >
+        <div class="d-grid p-1 collapse contentDisplay" id="target">
+            <div class="itembox"><a href="#" class="nav-link contentDisplay m-3 item ">MENU</a> <hr> </div>
+            <div class="itembox"><a href="#">
+               <i class="bi bi-person nav-link fs-4 contentDisplay m-3 item"></i></a><hr>
+            </div>
+            <div class="itembox"><a class="nav-link contentDisplay m-3 item" href="#">CART</a></div>
+        </div>
+    </div>
 
 <!-- Menu Head - Filter and sort and Menu -->
     <div class="header position-relative d-flex align-items-center my-4">
