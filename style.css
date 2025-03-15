@@ -38,23 +38,17 @@ body {
     background: var(--white);
     border-radius: 15px;
     padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    position: relative;
     width: 100px; 
 }
 
 .search-box {
     border: none;
     outline: none;
-    flex-grow: 1;
     min-width: 100px;
     padding: 1px 30px 1px 10px; 
-    border-radius: 10px;
 }
 
 .search-icon {
-    position: absolute;
     right: 10px;
     color: gray;
     cursor: pointer;
