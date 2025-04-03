@@ -160,8 +160,9 @@ body {
   }
   @media (min-width: 1024px) { 
     .container {
-        margin-top: 0px !important; /* Remove extra space */
+        margin-top: 0px !important;
         padding-top: 0 !important;
+
     }
 }
 
@@ -249,7 +250,6 @@ body {
     font-size: 15px;
 }
 /* Footer */
-/* Footer */
 .footerContainer {
     background-color: var(--primary);
     color: var(--white);
@@ -282,13 +282,18 @@ body {
    }
 
    .footerItem{
-    margin: 0 5px 20px 0;
-    padding: 5px;
+    margin: 0 10px 20px 0;
    }
 
    .follow{
     margin: 0 15px
    }
+}
+
+@media (width<=400px) {
+    .footerContainer{
+        padding: 0px;
+    }
 }
 .footerItem{
     line-height: 0;
