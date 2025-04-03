@@ -1,4 +1,3 @@
-
 :root {
     --primary: #143F17;
     --white : #fcfff5;
@@ -25,12 +24,18 @@ body {
 /* NavBar */
 .navbar-custom {
     background-color: var(--primary); 
-    padding: 10px 5px;
-    
+    height: 64px; /* Navbar Height */
 }
+/* 
+@media (width <= 400px) {
+    .navbar-custom {
+        height: 54px;
+    }
+} */
+
 .navbar-brand {
     font-weight: bold;
-    color: var(--white)!important;;
+    color: var(--white) !important;
     margin-right: 15px;
 }
 
@@ -38,15 +43,28 @@ body {
 .search-container {
     background: var(--white);
     border-radius: 15px;
-    padding: 5px 10px;
+    padding: 12px;
+    width: 100px; 
+    height: 40px;
 }
+
+/* 
+@media (width <= 400px) {
+    .search-container {
+        height: 35px; 
+    }
+} */
 
 .search-box {
     border: none;
     outline: none;
-    width: 100px;
-    height: 15px;
-    padding: 5px;
+    min-width: 100px;
+}
+
+.search-icon {
+    right: 10px;
+    color: gray;
+    cursor: pointer;
 }
 
 /* Nav Links */
@@ -60,15 +78,13 @@ body {
 /* Hamburger */
 
 @media (min-width: 472px) {
-    .hamburger,.contentDisplay{
+    .hamburger,.contentDisplay,hr{
         display: none;
     }
  }
 
-
-
 @media (max-width: 472px) {
-    .smallscreen{
+    .DesktopView{
         display: none;
     }
     .search-container{
@@ -80,20 +96,44 @@ body {
         border: none;
     }
     #target {
-        display: block; 
-        text-align: center;
+        width: 65vw;
+        height: auto;
+        background-color: var(--white);
+        margin-top: 0;
+        border-radius: 0 0 5px 5px;
+        border-top: 5px solid var(--shade3);
+        box-shadow: 0px 5px 8px black;
+        position: absolute;
         visibility: hidden; /* Initially hidden */
         max-height: 0; 
         overflow: hidden;
+        z-index: 10;
     }
-    
-    #target.show {
-        visibility: visible; /* Makes it visible when expanded */
-        max-height: 500px; /* Adjust this height if needed */
+   
+    #target.show{
+        transition: border-top 0ms ease-in-out, all 1s ease-in-out;
+        visibility: visible;  /*Makes it visible when expanded */
+        max-height: 500px;  /*Adjust this height if needed */
     }
-    
- }
 
+    .item {
+        font-weight: 500;
+        color: var(--primary) !important;
+        text-shadow: 0 0 1px var(--shade4);
+        text-decoration: none;
+    }
+
+    .itembox:hover{
+        transition: all 0.1s ease-in-out;
+        background-color: rgba(220, 220, 220, 0.479);
+        border-left: 5px solid var(--primary);
+    }
+
+    hr{
+        margin: 0;
+        color: black;
+    }
+ }
  .poppins-regular {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -103,6 +143,8 @@ body {
 
   body{
     background-color: #ecf0f1;
+    margin: 0;
+    padding: 0;
     
   }
 
@@ -116,6 +158,12 @@ body {
     gap: 10px;
     margin: 30px auto;
   }
+  @media (min-width: 1024px) { 
+    .container {
+        margin-top: 0px !important; /* Remove extra space */
+        padding-top: 0 !important;
+    }
+}
 
   .image{
     width: 100%;
@@ -201,6 +249,7 @@ body {
     font-size: 15px;
 }
 /* Footer */
+/* Footer */
 .footerContainer {
     background-color: var(--primary);
     color: var(--white);
@@ -226,22 +275,39 @@ body {
 }
 
 @media (max-width: 715px) {
+   .foot{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+   }
+
+   .footerItem{
+    margin: 0 5px 20px 0;
+    padding: 5px;
+   }
+
+   .follow{
+    margin: 0 15px
+   }
+}
+.footerItem{
+    line-height: 0;
+}
+@media (max-width: 715px) {
     .container {
         display: flex;
-        flex-direction: row; /* Keep items side by side */
-        flex-wrap: wrap; /* Allow wrapping on very small screens */
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
         justify-content: center;
         width: 100%;
         height: auto;
-        
-        gap: 10px;
         padding: 10px;
+        gap: 10px;
     }
 
     .card-left, .card-right {
-        flex: 1; /* Let both sections take equal space */
-        max-width: 50%; /* Ensure they stay side by side */
+        width: 100%; /* Make them take full width */
+        max-width: 100%;
     }
 
     .card-left img {
@@ -251,18 +317,18 @@ body {
     }
 
     .card-right {
-        padding-left: 10px;
+        padding: 15px;
+        text-align: center; /* Center-align content */
     }
 
     .star {
-        justify-content: start;
-
+        justify-content: center;
     }
 
     .form {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 10px;
     }
 
@@ -271,21 +337,52 @@ body {
         max-width: 200px;
     }
 }
+.whatsapp-float {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 4px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
 
-    @media (max-width: 715px) {
-        .foot{
-         display: flex;
-         flex-direction: column;
-         margin: 40px;
-        }
-        .footerItem{
-         margin-right: 10px;
-        }
-        .follow{
-         margin: 0 15px
-        }
-     }
-     .footerItem{
-         line-height: 0;
-     }
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+    font-size: 30px;
+}
+@media (max-width: 715px) {
+    .whatsapp-float {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 60%;
+        padding: 10px;
+        font-size: 4px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
     
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #1ebe5d;
+    }
+    
+    .whatsapp-icon {
+        font-size: 30px;
+    }
+
+}
