@@ -229,13 +229,18 @@ body {
    }
 
    .footerItem{
-    margin: 0 5px 20px 0;
-    padding: 5px;
+    margin: 0 10px 20px 0;
    }
 
    .follow{
     margin: 0 15px
    }
+}
+
+@media (width<=400px) {
+    .footerContainer{
+        padding: 0px;
+    }
 }
 .footerItem{
     line-height: 0;
