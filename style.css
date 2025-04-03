@@ -25,8 +25,15 @@ body {
 /* NavBar */
 .navbar-custom {
     background-color: var(--primary); 
-    padding: 10px 5px;
+    height: 64px; /* Navbar Height */
 }
+/* 
+@media (width <= 400px) {
+    .navbar-custom {
+        height: 54px;
+    }
+} */
+
 .navbar-brand {
     font-weight: bold;
     color: var(--white);
@@ -37,15 +44,22 @@ body {
 .search-container {
     background: var(--white);
     border-radius: 15px;
-    padding: 5px 10px;
+    padding: 12px;
     width: 100px; 
+    height: 40px;
 }
+
+/* 
+@media (width <= 400px) {
+    .search-container {
+        height: 35px; 
+    }
+} */
 
 .search-box {
     border: none;
     outline: none;
     min-width: 100px;
-    padding: 1px 30px 1px 10px; 
 }
 
 .search-icon {
@@ -126,22 +140,30 @@ body {
 /* Menu Head - Filter & Sort */
 .filterImg{
     color: black;
-    font-size: 15px;
+    font-size: 16px;
     padding-left: 3px;
 }
 /* sort */
 .sort{
-    width: 25px;
-    height: 13px;
+    width: 22px;
+    height: 14px;
+    padding-left: 3px;
 }
+
 .filter{
     font-size: 12px;
+    font-weight: 500;
     letter-spacing: 1px;
     color: black; 
 }
 
+.filter:hover{
+    color: var(--primary);
+}
+
 .heading{
     color: var(--primary);
+    font-size: 24px;
     font-weight: 600;
 }
 /* ------------------------------------------------------------------------- */
@@ -169,8 +191,8 @@ body {
 }
 /* whatsapp Image */
 .whatsapp{
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -205,9 +227,12 @@ body {
     flex-direction: column;
     margin: 40px;
    }
+
    .footerItem{
-    margin-right: 10px;
+    margin: 0 5px 20px 0;
+    padding: 5px;
    }
+
    .follow{
     margin: 0 15px
    }
