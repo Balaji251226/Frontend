@@ -215,7 +215,7 @@ main{
     cursor: pointer;
 }
 
-@media (width<=997px) {
+@media (width<=1000px) {
 /* Mobile View - Card */
 .card{                  
     width: 150px;
