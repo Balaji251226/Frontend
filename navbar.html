@@ -1,22 +1,22 @@
-<nav class="navbar navbar-custom">
+<nav class="navbar navbar-custom" aria-label="Main navigation">
     <div class="container-fluid gap-3 d-flex align-items-center"> <!-- gap-3 : 16px - space for each nav-link -->
         <!-- Logo -->
         <a class="navbar-brand hover" href="#">LOGO</a>
 
         <!-- Search Bar : padding, border radius, height in custom css-->
         <div class="search-container d-flex align-items-center flex-grow-1 position-relative">
-            <input type="text" class="search-box flex-grow-1" placeholder="">
+            <input type="text" class="search-box flex-grow-1" placeholder="" aria-label="Search">
             <span class="search-icon position-absolute"><i class="bi bi-search fs-6"></i></span>
         </div>
 
         <!-- Button : hamburger -->
-        <button class="hamburger btn-primary hover" type="button" onclick="openMenu()">
+        <button class="hamburger btn-primary hover" type="button" onclick="openMenu()" aria-label="Open navigation menu">
             <i class="bi bi-list text-white fs-1"></i>
             <!-- fs-1 : 40px hamburger icon -->
         </button>
 
         <!-- For Desktop and Laptop view -->
-        <div class="DesktopView ">       <!-- nav-link : fs - 18px -->
+        <div class="DesktopView">       <!-- nav-link : fs - 18px -->
             <a href="#" class="nav-link DesktopView hover">MENU</a>  
         </div>
         <div class="DesktopView">
@@ -29,12 +29,12 @@
         </div>
     </div>
 
-    <div id="fullscreenMenu" class="fullscreen-menu">
+    <div id="fullscreenMenu" class="fullscreen-menu" role="navigation" aria-label="Mobile menu">
         <div class="close-btn" onclick="closeMenu()">✖</div>
         
         <a href="#" class="nav-link hover">MENU</a> 
     
-        <a class="nav-link d-flex align-items-center" href="#">
+        <a class="nav-link d-flex align-items-center" href="#" aria-label="User profile">
             <i class="bi bi-person fs-4 hover"></i> <!-- fs-4 : 24px icon -->
         </a>
       
