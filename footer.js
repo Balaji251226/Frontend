@@ -13,21 +13,22 @@ fetch("./footer.html")
     icon.style.right = "20px";
     icon.style.transition = "bottom 0.3s ease";
 
-    window.addEventListener("scroll", () => {
+    const buffer = 40;
+
+    function handleScroll() {
       const footerRect = footer.getBoundingClientRect();
       const iconHeight = icon.offsetHeight;
-      const buffer = 40;
-
-      // Distance from bottom of viewport to top of footer
       const distanceToFooter = window.innerHeight - footerRect.top;
 
       if (distanceToFooter > 0) {
-        // Footer is overlapping or very close
         icon.style.bottom = `${distanceToFooter + buffer}px`;
       } else {
         // Default position
         icon.style.bottom = `${buffer}px`;
       }
-    });
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll(); // Trigger once on load
   })
   .catch(err => console.error("Footer load error:", err));
